@@ -1,0 +1,28 @@
+{
+    "name": "spinner",
+    "type": "dynamic",
+    "description": "A Spinning Critter",
+    "shape": [
+        { "x": -17.33, "y": -20 },
+        { "x":      0, "y": -10 },
+        { "x":      0, "y":  10 },
+        { "x": -17.33, "y":  20 },
+        { "x": -34.66, "y":  10 },
+        { "x": -34.66, "y": -10 }
+    ],
+    "friction": {
+      "collision": 2,
+      "linear": 40,
+      "rotational": 600
+    },
+    "sensors": [
+      {
+        "type": "range",
+        "location": { "x": 0, "y": 0 },
+        "direction": 0
+      }
+    ],
+    "view": 120,
+    "mass": 1,    
+    "controller": "lib/spinner.so"
+}

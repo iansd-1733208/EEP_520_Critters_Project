@@ -1,0 +1,26 @@
+{
+    "name": "robot",
+    "type": "dynamic",
+    "description": "A Robot Critter",
+    "shape": [
+        { "x": -20, "y": -20 },
+        { "x":   0, "y": -10 },
+        { "x":   0, "y":  10 },
+        { "x": -20, "y":  20 }
+    ],
+    "friction": {
+      "collision": 2,
+      "linear": 40,
+      "rotational": 600
+    },
+    "sensors": [
+      {
+        "type": "range",
+        "location": { "x": 0, "y": 0 },
+        "direction": 0
+      }
+    ],
+    "view": 100,
+    "mass": 1,    
+    "controller": "lib/robot.so"
+}

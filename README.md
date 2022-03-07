@@ -53,9 +53,9 @@ This class must inherit from **CritterController** and have 4 private members, o
 
     private:
         YourCritterNormalState m_YourNormalState;
-        YourCritterAllyState m_YourNormalState;
-        YourCritterWallState m_YourNormalState;
-        YourCritterAttackState m_YourNormalState;
+        YourCritterAllyState m_YourAllyState;
+        YourCritterWallState m_YourWallState;
+        YourCritterAttackState m_YourAttackState;
     }
 
 ##### Critter
@@ -82,9 +82,9 @@ This file is used by the make file to create the full controller. Typically the 
 This file defines the physical attributes of your critter. This files should be places in **defs/yourcritter.json** and in the format of a JSON file. An example of this format can be seen below. It is important to note that the "front" of the critter is defined as the segment between the first and second verticies in the **shape** array. Due to some limitation of Enviro, the first sensor in your critter must be a range sensor at location **{ "x": 0, "y": 0 }** and direction **0**. The **view** attribute defines how far the critter can see, if this value is 0, your critter is blind. Do not make a blind critter.
 
     {
-    "name": "Critter Name",
+    "name": "Your Critter Name",
     "type": "dynamic",
-    "description": "A Cool Critter",
+    "description": "A Cool Critter Description",
     "shape": [
         { "x": -20, "y": -20 }, // 'Front' is between
         { "x":   0, "y": -10 }, // these two verticies.
